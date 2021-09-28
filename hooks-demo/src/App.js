@@ -1,6 +1,8 @@
 import './App.css';
 import Counter from './components/counter/counter';
-import TODOComponent from './components/todo'
+import TODOComponent from './components/todo';
+import SnakeGame from './components/basic';
+import TicTacToe from './components/basic/tic-tac-toe'
 import React, { useState } from 'react';
 
 
@@ -23,7 +25,7 @@ function App() {
   const componentItems = [
     { name: 'Counter Example', tag: <Counter />, description: 'Counts till 10' },
     { name: 'TODO Example', tag: <TODOComponent />, description: 'Tracks items to do' },
-    { name: 'Record Manager', tag: <h5>Empty component</h5>, description: 'Not decided yet' }
+    { name: 'Play game', tag: <TicTacToe />, description: 'Not decided yet' }
   ]
   // console.log({ ref: this })  op: undefined
 

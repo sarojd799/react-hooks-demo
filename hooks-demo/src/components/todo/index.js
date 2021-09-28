@@ -18,13 +18,20 @@ function TODOComponent() {
     const inputButton = useRef(null);
     const inputBox = useRef(null);
     const childData = useContext(ChildDataContext)
-    const handleKeyUp = (e) => inputButton.current.disabled = !(e && e.target.value && e.target.value.trim());
 
     const handleNewItemAdd = function () {
         dispatch({ type: 'add', payload: inputBox.current.value })
         inputBox.current.value = '';
     }
 
+    const handleKeyUp = (e) => {
+        if (e.key === 'Enter') {
+            if (!e.target.value) return;
+            handleNewItemAdd();
+        } else {
+            inputButton.current.disabled = !(e && e.target.value && e.target.value.trim())
+        }
+    };
     return (
         <div>
             <p className="mb-1rem f1-rem text-center">

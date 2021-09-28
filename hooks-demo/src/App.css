@@ -25,16 +25,17 @@ body {
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   height: 20rem;
 }
+
 .left-panel ul button {
    background: none;
-   border:none;
    margin-bottom: 10px;
+   min-width: 10rem;
    display: block;
    font-size: 16px;
    letter-spacing: 1px;
    cursor: pointer;
    padding:0.5rem 1rem;
-   border: 1px solid lightgray;
+   border: 2px solid lightgray;
    font-weight: 500;
 }
 .left-panel ul button:hover {
