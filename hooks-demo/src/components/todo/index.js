@@ -1,8 +1,6 @@
-import { useReducer, useRef, useContext, useImperativeHandle } from "react";
+import { useReducer, useRef, useContext } from "react";
 import { ChildDataContext } from '../../App'
 import './todo.css'
-
-
 
 function todoReducer(state = [], action) {
     switch (action.type) {
@@ -16,23 +14,16 @@ function todoReducer(state = [], action) {
 }
 
 function TODOComponent() {
-    const [state, dispatch] = useReducer(todoReducer);
+    const [state, dispatch] = useReducer(todoReducer, [], arg => arg);
     const inputButton = useRef(null);
     const inputBox = useRef(null);
     const childData = useContext(ChildDataContext)
-
-    useImperativeHandle(inputBox, () => ({
-        focus: (e) => {
-            console.log({ e })
-        }
-    }));
+    const handleKeyUp = (e) => inputButton.current.disabled = !(e && e.target.value && e.target.value.trim());
 
     const handleNewItemAdd = function () {
         dispatch({ type: 'add', payload: inputBox.current.value })
         inputBox.current.value = '';
     }
-
-    const handleKeyUp = (e) => inputButton.current.disabled = !(e && e.target.value && e.target.value.trim());
 
     return (
         <div>
