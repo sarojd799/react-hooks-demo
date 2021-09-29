@@ -20,7 +20,7 @@ body {
   width:45%;
   margin-top: 5rem;
   display:flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   height: 20rem;
@@ -38,8 +38,13 @@ body {
    border: 2px solid lightgray;
    font-weight: 500;
 }
+
+.left-panel ul button.active {
+  background: lightgray;
+}
+
 .left-panel ul button:hover {
-  background:lightgray;
+  background: #8080804d;
 }
 
 

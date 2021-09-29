@@ -1,0 +1,30 @@
+.conversion-container {
+    width: 24rem;
+    height:8rem;
+    display: flex;
+    align-items: center;
+    border:1px solid lightgray;
+    padding:1rem;
+}
+.conversion-container > div,
+.conversion-container button {
+    flex:1;
+    width:25%;
+    padding:10px;
+}
+.conversion-container > div > input,
+.conversion-container > div > select {
+    width:100%;
+    font-size: 16px;
+    padding:5px 10px;
+    outline:none;
+}
+.conversion-container button {
+    border:none;
+    background:mediumseagreen;
+    color:white;
+    letter-spacing: 1px;
+    border-radius: 0;
+    font-size:16px;
+    cursor: pointer;
+}

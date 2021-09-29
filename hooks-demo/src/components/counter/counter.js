@@ -12,7 +12,7 @@ function Counter() {
             <p className="child-label">
                 {childData}
             </p>
-            <p class="counter-line">
+            <p className="counter-line">
                 <button disabled={count === 0} onClick={() => setCount(count - 1)}> - </button>
                 <span>{count}</span>
                 <button disabled={count === 10} onClick={() => setCount(count + 1)}> + </button>

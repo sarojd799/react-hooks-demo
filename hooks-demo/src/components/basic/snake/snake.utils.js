@@ -55,6 +55,8 @@ const updateSnake = function (config, direction) {
     } else if (direction === 'D') {
         config.snake[0].x += 1;
     }
+
+
 }
 
 

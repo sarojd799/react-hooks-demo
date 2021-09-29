@@ -2,7 +2,9 @@ import './App.css';
 import Counter from './components/counter/counter';
 import TODOComponent from './components/todo';
 import SnakeGame from './components/basic/snake/snake';
+import Calculator from './components/calculator';
 import TicTacToe from './components/basic/tic-tac-toe'
+import Conversion from './components/conversion'
 import React, { useState } from 'react';
 
 
@@ -27,6 +29,9 @@ function App() {
     { name: 'TODO Example', tag: <TODOComponent />, description: 'Tracks items to do' },
     { name: 'TIC-TAC-TOE', tag: <TicTacToe />, description: 'Not decided yet' },
     { name: 'SNAKE GAME', tag: <SnakeGame />, description: 'Not decided yet' },
+    { name: 'CALCULATOR', tag: <Calculator />, description: 'Not decided yet' },
+    { name: 'SHUFFLE', tag: <h5>Empty component</h5>, description: 'Not decided yet' },
+    { name: 'CONVERSION', tag: <Conversion />, description: 'Not decided yet' }
   ]
   // console.log({ ref: this })  op: undefined
 
@@ -37,7 +42,9 @@ function App() {
           <ul>
             {
               componentItems.map((comp, i) => (
-                <button onClick={() => setComponent(comp)} key={`item-${i}`}>
+                <button
+                  className={comp.name === component.name ? 'active' : ''}
+                  onClick={() => setComponent(comp)} key={`item-${i}`}>
                   {comp.name}
                 </button>
               ))
