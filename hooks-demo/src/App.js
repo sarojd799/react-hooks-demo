@@ -26,7 +26,7 @@ function App() {
     { name: 'Counter Example', tag: <Counter />, description: 'Counts till 10' },
     { name: 'TODO Example', tag: <TODOComponent />, description: 'Tracks items to do' },
     { name: 'TIC-TAC-TOE', tag: <TicTacToe />, description: 'Not decided yet' },
-    { name: 'SNAKE-In-Canvas', tag: <SnakeGame />, description: 'Not decided yet' },
+    { name: 'SNAKE GAME', tag: <SnakeGame />, description: 'Not decided yet' },
   ]
   // console.log({ ref: this })  op: undefined
 

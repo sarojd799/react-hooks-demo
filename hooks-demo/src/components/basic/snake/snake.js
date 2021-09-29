@@ -30,7 +30,7 @@ function SnakeGame(props) {
             config.direction = direction
             updateSnake(config, direction);
             drawSnake(config)
-        }, config.intervalTime)
+        }, config.intervalTime / config.speed)
     }
 
     /*===============HANDLER================== */
@@ -59,7 +59,7 @@ function SnakeGame(props) {
                     score: <span id="score">{score}</span>
                 </label>
             </p>
-            <div id="snake-board" title="press enter to start the game" tabIndex="0" onKeyUp={e => keyUpListener(e)}>
+            <div id="snake-board" tabIndex="0" onKeyUp={e => keyUpListener(e)}>
                 {grids.map((cell, i) => (<div key={`cell-${i}`}></div>))}
             </div>
         </div>
