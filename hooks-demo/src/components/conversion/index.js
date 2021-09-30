@@ -27,7 +27,7 @@ function Conversion(props) {
             </div>
             <div className="inputs">
                 <input type="text" ref={inputA} />
-                <input type="text" ref={inputB} />
+                <input type="text" ref={inputB} readOnly />
             </div>
             <button >
                 CONVERT

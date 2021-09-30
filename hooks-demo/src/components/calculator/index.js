@@ -29,7 +29,7 @@ function reducer(state, { type, payload }) {
 function Calculator(props) {
 
     const numbers = ['7', '8', '9', '4', '5', '6', '1', '2', '3', '0', '00']
-    const operators = ['C', '<', '+', '-', '/', '*', '(', ')', '%', '=']
+    const operators = ['C', '<', '+', '-', '*', '/', '(', ')', '%', '=']
     const [exp, dispatch] = useReducer(reducer, '0')
 
     const appendToExp = (item, type) => {

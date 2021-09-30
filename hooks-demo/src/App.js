@@ -5,6 +5,7 @@ import SnakeGame from './components/basic/snake/snake';
 import Calculator from './components/calculator';
 import TicTacToe from './components/basic/tic-tac-toe'
 import Conversion from './components/conversion'
+import ShuffleAndSort from './components/shuffle'
 import React, { useState } from 'react';
 
 
@@ -30,8 +31,8 @@ function App() {
     { name: 'TIC-TAC-TOE', tag: <TicTacToe />, description: 'Not decided yet' },
     { name: 'SNAKE GAME', tag: <SnakeGame />, description: 'Not decided yet' },
     { name: 'CALCULATOR', tag: <Calculator />, description: 'Not decided yet' },
-    { name: 'SHUFFLE', tag: <h5>Empty component</h5>, description: 'Not decided yet' },
-    { name: 'CONVERSION', tag: <Conversion />, description: 'Not decided yet' }
+    { name: 'SHUFFLE & SORT', tag: <ShuffleAndSort />, description: 'Not decided yet' },
+    { name: 'NUM SYS CONVERSION', tag: <Conversion />, description: 'Not decided yet' }
   ]
   // console.log({ ref: this })  op: undefined
 

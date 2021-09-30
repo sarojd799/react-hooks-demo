@@ -28,3 +28,10 @@
     font-size:16px;
     cursor: pointer;
 }
+.conversion-container [type="text"]:first-of-type {
+    border: none;
+    border-bottom: 1px solid gray;
+}
+.conversion-container select {
+    font-size: 16px;
+}
