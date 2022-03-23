@@ -1,24 +1,26 @@
 .shuffle-container {
-    height:9rem;
-    width:9rem;
-    border:1px solid lightgray;
-    padding:0.5rem;
+    height: 13rem;
+    width: 13rem;
+    border: 1px solid lightgray;
+    padding: 0.5rem;
     display: flex;
     flex-wrap: wrap;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
 .shuffle-container div {
     width: 40px;
-    height:40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border:1px solid lightgray;
+    border: 1px solid lightgray;
     margin-left: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     font-size: 16px;
     font-weight: normal;
 }
+
 .shuffle-container div:hover {
     background: lightgray;
     cursor: pointer;

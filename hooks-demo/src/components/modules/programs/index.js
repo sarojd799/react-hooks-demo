@@ -1,11 +1,11 @@
-import './App.css';
-import Counter from './components/counter/counter';
-import TODOComponent from './components/todo';
-import SnakeGame from './components/basic/snake/snake';
-import Calculator from './components/calculator';
-import TicTacToe from './components/basic/tic-tac-toe'
-import Conversion from './components/conversion'
-import ShuffleAndSort from './components/shuffle'
+import './index.css';
+import Counter from './counter/counter';
+import TODOComponent from './todo';
+import SnakeGame from './basic/snake/snake';
+import Calculator from './calculator';
+import TicTacToe from './basic/tic-tac-toe'
+import Conversion from './conversion'
+import ShuffleAndSort from './shuffle'
 import React, { useState } from 'react';
 
 
@@ -22,7 +22,7 @@ import React, { useState } from 'react';
 
 const ChildDataContext = React.createContext();
 
-function App() {
+function AppsModule() {
 
   const [component, setComponent] = useState({ name: 'default', component: <h5>Empty component</h5> })
   const componentItems = [
@@ -37,29 +37,27 @@ function App() {
   // console.log({ ref: this })  op: undefined
 
   return (
-    <div className="App">
-      <div className="container">
-        <div className="left-panel section">
-          <ul>
-            {
-              componentItems.map((comp, i) => (
-                <button
-                  className={comp.name === component.name ? 'active' : ''}
-                  onClick={() => setComponent(comp)} key={`item-${i}`}>
-                  {comp.name}
-                </button>
-              ))
-            }
-          </ul>
-        </div>
-        <div className="right-panel section">
-          <ChildDataContext.Provider value={component.name}>
-            {component.tag}
-          </ChildDataContext.Provider>
-        </div>
+    <div className="programs">
+      <div className="left-panel section">
+        <ul>
+          {
+            componentItems.map((comp, i) => (
+              <button
+                className={comp.name === component.name ? 'active' : ''}
+                onClick={() => setComponent(comp)} key={`item-${i}`}>
+                {comp.name}
+              </button>
+            ))
+          }
+        </ul>
+      </div>
+      <div className="right-panel section">
+        <ChildDataContext.Provider value={component.name}>
+          {component.tag}
+        </ChildDataContext.Provider>
       </div>
     </div>
   );
 }
 
-export { ChildDataContext, App as default };
+export { ChildDataContext, AppsModule as default };

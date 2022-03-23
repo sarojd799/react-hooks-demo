@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { ChildDataContext } from '../../App'
+import { ChildDataContext } from '../index'
 import './counter.css'
 
 function Counter() {

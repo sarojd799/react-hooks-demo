@@ -1,10 +1,21 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './index.css'
 
-const nums = Array(15).fill(1).map((n, i) => i + 1).sort(() => Math.floor(Math.random() * (5 + 7) - 7));
+let nums = Array(15).fill(1).map((n, i) => i + 1).sort(() => Math.floor(Math.random() * (5 + 7) - 7));
+let parent = null;
 
 function ShuffleAndSort() {
     const [source, setSource] = useState(null);
+
+
+    useEffect(() => {
+        const match = Array.from(document.getElementsByClassName('shuffle-container'))
+        if (match && match.length) {
+            parent = match[0]
+        }
+    })
+
+
 
     const onDragStart = function (e) {
         e.dataTransfer.setData("value", e.target.innerText);
@@ -23,6 +34,13 @@ function ShuffleAndSort() {
         if (validTarget && isBlankBox && (isPrev || isNext || isTop || isBottom)) {
             e.target.innerText = e.dataTransfer.getData('value')
             source.innerText = ''
+        }
+
+        const childrens = parent && Array.from(parent.children)
+        const match = childrens.every((e, i) => (i === (childrens.length - 1)) || ((i + 1) === e.innerText))
+        if (match) {
+            alert('You won.!!!')
+            Array(15).fill(1).map((n, i) => i + 1).sort(() => Math.floor(Math.random() * (5 + 7) - 7));
         }
     }
 

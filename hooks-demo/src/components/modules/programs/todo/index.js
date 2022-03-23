@@ -1,5 +1,5 @@
 import { useReducer, useRef, useContext } from "react";
-import { ChildDataContext } from '../../App'
+import { ChildDataContext } from '../index'
 import './todo.css'
 
 function todoReducer(state = [], action) {

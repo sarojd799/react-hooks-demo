@@ -1,0 +1,5 @@
+
+
+#About the project
+
+The application will contain single header  and footer with dynamic content 
