@@ -1,6 +1,6 @@
 import React from 'react';
 
-function useStateExample(props) {
+function UseStateExample(props) {
     return (
         <div>
             use state
@@ -8,4 +8,4 @@ function useStateExample(props) {
     );
 }
 
-export default useStateExample;
+export default UseStateExample;

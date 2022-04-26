@@ -1,0 +1,40 @@
+.hooks-container {
+    position: absolute;
+    height: 100%;
+    display: flex;
+}
+
+.hooks-container .left-panel__parent,
+.hooks-container .left-panel {
+    height: 100%;
+}
+
+.hooks-container .left-panel {
+    width: 16rem;
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+}
+
+.hooks-container .left-panel ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid lightgray;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.hooks-container .left-panel ul li:hover {
+    background-color: lightgray;
+    color: #fff;
+}
+
+.hooks-container .left-panel ul li:first-child {
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding: 1rem;
+    background-color: #444;
+    color: #fff;
+    letter-spacing: 0.065rem;
+}
+
+.hooks-container .left-panel ul li:first-child span {}

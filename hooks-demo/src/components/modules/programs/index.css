@@ -27,7 +27,7 @@
   height: 20rem;
 }
 
-.left-panel ul button {
+.programs .left-panel ul button {
   background: none;
   margin-bottom: 10px;
   min-width: 12rem;
@@ -40,26 +40,40 @@
   font-weight: 500;
 }
 
-.left-panel ul button.active {
+.programs .left-panel ul button.active {
   background: #646060;
   color: white;
   border: 0.065rem solid #646060;
 }
 
-.left-panel ul button:not(.active):hover {
+.programs .left-panel ul button:not(.active):hover {
   background: #8080804d;
 }
 
-.counter-line button {
+.programs .counter-line button {
   padding: 5px 10px;
   outline: none;
+  box-shadow: rgb(0 0 0 / 5%) 0px 0px 0px 1px, rgb(209 213 219) 0px 0px 0px 1px inset;
+  cursor: pointer;
+  border: none;
 }
 
-.counter-line {
+.programs .counter-line {
   display: flex;
   align-items: center;
   justify-content: space-around;
   min-width: 8rem;
+}
+
+.programs .left-panel ul {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+}
+
+.programs .left-panel ul button {
+  flex: 1;
 }
 
 /**/
@@ -77,15 +91,4 @@
 
 .comp-desc {
   text-align: center;
-}
-
-.left-panel ul {
-  overflow: auto;
-  display: flex;
-  flex-direction: column;
-  padding-top: 4rem;
-}
-
-.left-panel ul button {
-  flex: 1;
 }
